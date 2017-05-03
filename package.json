@@ -1,0 +1,20 @@
+{
+  "name": "friendfinder",
+  "version": "0.1.0",
+  "description": "dating site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMM2016/friendfinder.git"
+  },
+  "author": "Miguel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMM2016/friendfinder/issues"
+  },
+  "homepage": "https://github.com/JMM2016/friendfinder#readme"
+}
