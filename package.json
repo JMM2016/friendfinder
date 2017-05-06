@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/JMM2016/friendfinder/issues"
   },
-  "homepage": "https://github.com/JMM2016/friendfinder#readme"
+  "homepage": "https://github.com/JMM2016/friendfinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
 }
