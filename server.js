@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 
 // Sets up the Express server
 const svr = express()
-const PORT = 3005
+const PORT =  process.env.PORT || 3005
 
 
 // Sets up the Express server to handle data parsing
