@@ -23,23 +23,22 @@ module.exports = function(svr) {
         "photo":"http://findicons.com/files/icons/350/aqua_smiles/128/sad.png"
       }
     } else {
+
       bestMatch = friendsData[0]
-      let highScore = -1
+      let lowScore = 41
 
-      // compare the new friend to all the other friends
-      for (let i = 0; i < friendsData.length; i++) {
-
-        // grab first friend
-        let tempMatch = friendsData[i]
+      for (let friend in friendsData) {
+        friend = friendsData[friend]
         let sum = 0
 
-        for (let j = 0; j < tempMatch.scores.length; j++) {
-          sum +=  Math.abs(req.body.scores[j] - tempMatch.scores[j])
-        }
+        sum = friend.scores.reduce((acc, currVal, currIdx) => {
+            return acc + Math.abs(currVal - req.body.scores[currIdx])
+          }, 0
+        )
 
-        if (sum > highScore) {
-          highScore = sum
-          bestMatch = tempMatch
+        if (sum < lowScore) {
+          lowScore = sum
+          bestMatch = friend
         }
       }
     }
